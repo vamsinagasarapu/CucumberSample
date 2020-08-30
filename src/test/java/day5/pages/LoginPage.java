@@ -1,4 +1,4 @@
-package com.pages;
+package day5.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,5 +36,13 @@ public class LoginPage extends Reusable {
 		return loginbtn;
 	}
 	
+	public void login(String s1, String s2) {
+		
+		sendInput(getUser(), s1);
+		sendInput(getPass(), s2);
+		click(getLoginbtn());
+		
+		
+	}
 	
 }
